@@ -1,5 +1,227 @@
-*{
+/* common styles */
+* {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
+  text-decoration: none;
 }
+@font-face {
+  font-family: "Poppins Regular";
+  font-style: normal;
+  font-weight: normal;
+  src: local("Poppins Regular"),
+    url("./fontfamily/Poppins-Regular.woff") format("woff");
+}
+
+@font-face {
+  font-family: "Poppins Black";
+  font-style: normal;
+  font-weight: normal;
+  src: local("Poppins Black"),
+    url("./fontfamily/Poppins-Black.woff") format("woff");
+}
+
+@font-face {
+  font-family: "Poppins Medium";
+  font-style: normal;
+  font-weight: normal;
+  src: local("Poppins Medium"),
+    url("./fontfamily/Poppins-Medium.woff") format("woff");
+}
+
+html,
+body {
+  height: 100%;
+  position: relative;
+  font-family: "Poppins Regular";
+}
+button {
+  background: transparent;
+  cursor: pointer;
+  border: none;
+  color: white;
+}
+.bg1 {
+  background-color: #5e17eb;
+}
+.bold {
+  font-weight: bold;
+}
+.bigh1 {
+  font-size: clamp(0.9375rem, 0.6908rem + 1.2336vw, 1.875rem);
+}
+.py-5 {
+  padding-block: 12px;
+}
+/* common styles */
+
+.nav1 {
+  display: flex;
+  justify-content: space-between;
+  padding: 10px 20px;
+  /* position: sticky; */
+  top: 0;
+  left: 0;
+  /* z-index:0000; */
+}
+
+.menu {
+  position: relative;
+  font-size: 22px;
+  z-index: 10;
+}
+
+.logo {
+  color: white;
+  font-weight: bold;
+  font-size: 22px;
+  font-family: "Poppins Black";
+}
+.overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  transition: all 0.8s;
+}
+.overlay.active {
+  background-color: rgba(0, 0, 0, 0.5);
+  z-index: 2;
+}
+.sidebar {
+  position: fixed;
+  height: 100%;
+  width: 250px;
+  left: -100%;
+  transition: all 0.8s;
+}
+.sidebar.active {
+  left: -0%;
+}
+.sidemenu {
+  padding-left: 20px;
+  padding-top: 100px;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+.nav-link {
+  color: white;
+  font-weight: bold;
+}
+
+.nav-link.active {
+  color: rgba(255, 255, 255, 0.692);
+}
+
+.swiper {
+  height: 70vh;
+  z-index: 000;
+}
+
+.swiper-pagination-bullet{
+width: 12px;
+height: 12px;
+background-color: white;
+}
+
+.section2 {
+  text-align: center;
+  padding: 50px 20px;
+  display: flex;
+  flex-direction: column;
+  gap: 50px;
+}
+.head1 {
+  font-weight: bold;
+  font-family: "Poppins Medium";
+}
+.section2 h1 {
+  font-family: "Poppins Medium";
+}
+
+.cards {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 5vw;
+}
+.cards .card {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  flex-basis: 200px;
+}
+.circle {
+  width: 100px;
+  height: 100px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 50%;
+}
+.cards .card img {
+  width: 80px;
+  aspect-ratio: 1;
+}
+.cards2 {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 30px;
+}
+.cards2 .card {
+  background-color: #eff0f6;
+  width: 190px;
+}
+.cards2 .card img {
+  width: 100%;
+  object-fit: cover;
+  height: 270px;
+}
+
+.cards2 .card p {
+  font-size: 14px;
+}
+.plane-icon {
+  color: gray;
+  rotate: -45deg;
+}
+footer{
+  padding: 30px;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+footer p{
+  text-align: center;
+  color: white;
+}
+.footer-menu{
+  display: flex;
+  justify-content: center;
+  gap: 50px;
+  list-style: none;
+}
+.footer-menu li{
+  width: 50px;
+  height: 50px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 50%;
+  transition: all .5s;
+}
+.footer-menu li:hover{
+ background-color: #430cb1;
+
+}
+.footer-menu img{
+  width: 30px;
+  height: 30px;
+}
+/* Header/Footer - #5E17EB
+Very light purple (Used in contact page bg and boxes) - #F4EFFF
+Light gray (Used in form placeholders + Accommodation page) - #EFF0F6 */
