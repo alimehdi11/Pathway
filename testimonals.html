@@ -31,71 +31,6 @@
     </div>
     </div>
 <div class="programs">
-  <h1 class="bold head1 text-center bigh1">Frequently Asked Questions</h1>
-  <div class="faqs">
-    <div class="faq">
-      <div class="faq-header">
-        <p class="head1" >1.What are the eligibility requirements for applying to the Pathway program?</p>
-        <button class="bg1 faq-btn"><i class="fa-solid fa-plus"></i></button>
-      </div>
-      <p>students must be 18 years old or more to be qualified to apply for a Pathway program.</p>
-    </div>
-    <div class="faq">
-      <div class="faq-header">
-        <p class="head1" >2.What countries or institutions can students participate in through the Pathway program?</p>
-        <button class="bg1 faq-btn"><i class="fa-solid fa-plus"></i></button>
-      </div>
-      <p>students must be 18 years old or more to be qualified to apply for a Pathway program.</p>
-    </div>
-    <div class="faq">
-      <div class="faq-header">
-        <p class="head1" >3.How does the Pathway exchange program differ from other exchange program?</p>
-        <button class="bg1 faq-btn"><i class="fa-solid fa-plus"></i></button>
-      </div>
-      <p>students must be 18 years old or more to be qualified to apply for a Pathway program.</p>
-    </div>
-    <div class="faq">
-      <div class="faq-header">
-        <p class="head1" >4.How does the application process for the Pathway program work?</p>
-        <button class="bg1 faq-btn"><i class="fa-solid fa-plus"></i></button>
-      </div>
-      <p>students must be 18 years old or more to be qualified to apply for a Pathway program.</p>
-    </div>
-    <div class="faq">
-      <div class="faq-header">
-        <p class="head1" >2.What countries or institutions can students participate in through the Pathway program?</p>
-        <button class="bg1 faq-btn"><i class="fa-solid fa-plus"></i></button>
-      </div>
-      <p>students must be 18 years old or more to be qualified to apply for a Pathway program.</p>
-    </div>
-  </div>
-  <h1 class="bold head1 text-center bigh1">Apply for an opportunity with us.</h1>
-  <div class="cards3 flex center">
-    <div class="card">
-      <p><span class="bold">Global Volunteer</span> is a global educational volunteering program where, you'll engage in an SDG project and put your problem solving skills into practice.</p>
-      <div>
-        <p><span class="bold">Duration</span>6 weeks</p>
-        <p><span class="bold">Fees</span>150 BD</p>
-      </div>
-      <a href="" class="bg1">Apply Now</a>
-    </div>
-    <div class="card">
-      <p><span class="bold">Golabal Teacher</span> is a global educational volunteering program where, you'll engage educational activities for kids aged 6-13 and put your teaching skills into practice.</p>
-      <div class="py-5">
-        <p><span class="bold">Duration</span>4-6 weeks</p>
-        <p><span class="bold">Fees</span>150 BD</p>
-      </div>
-      <a href class="bg1">Apply Now</a>
-    </div>
-    <div class="card">
-      <p><span class="bold">Golabal Talent</span> is a global internship where, you'll given an internship opportunity in a country abroad and receive practical experience in your feild expertise.</p>
-      <div id="testimonals">
-        <p><span class="bold">Duration</span>13-52 weeks</p>
-        <p><span class="bold">Fees</span>200 BD</p>
-      </div>
-      <a href class="bg1">Apply Now</a>
-    </div>
-  </div>
   <h1 class="bold head1 text-center bigh1">Here from our happy students!</h1>
   <div class="cards4" >
     <div class="card">
@@ -171,27 +106,7 @@ const handleSidebar = () =>{
   sideBar.classList.toggle("active")
   overlay.classList.toggle("active")
 };
-let faqBtn = document.querySelectorAll(".faq button");
-for(let btn of faqBtn){
-  btn.addEventListener("click",()=>{
-  btn.firstChild.classList.toggle('fa-plus')
-  btn.firstChild.classList.toggle('fa-minus')
-  btn.parentElement.nextElementSibling.classList.toggle("active")
-  })
-}
 
-let footerMenu = document.querySelector("footer ul");
-
-for (let li of footerMenu.children) {
-    li.classList.remove("active");
-}
-let currentPath = window.location.pathname;
-for (let li of footerMenu.children) {
-    let anchor = li.querySelector("a");    
-    if (anchor.getAttribute("href").slice(1) === currentPath) {
-        li.classList.add("active");
-    }
-}
 </script>
 </body>
 </html>

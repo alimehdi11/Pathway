@@ -11,6 +11,11 @@
   <link rel="stylesheet" href="./style.css">
   <!-- style css -->
 </head>
+<style>
+  body{
+    overflow-y: hidden;
+  }
+</style>
 <body>
   <nav class="bg1 nav1">
     <button class="menu" onclick="handleSidebar()"><i class="fa-solid fa-bars"></i></button>
@@ -24,9 +29,9 @@
         <li onclick="handleSidebar()"><a href="./index.html#about-section" class="nav-link">About</a></li>
         <li onclick="handleSidebar()"><a href="./programs.html" class="nav-link">Programs</a></li>
         <li onclick="handleSidebar()"><a href="./destination.html" class="nav-link">Destinations</a></li>
-        <li onclick="handleSidebar()"><a href="./programs.html#testimonals" class="nav-link">Testimonals</a></li>
-        <li onclick="handleSidebar()"><a href="./programs.html" class="nav-link">FAQs</a></li>
-        <li onclick="handleSidebar()"><a href="#" class="nav-link">Contact</a></li>
+        <li onclick="handleSidebar()"><a href="./testimonals.html" class="nav-link">Testimonals</a></li>
+        <li onclick="handleSidebar()"><a href="./faqs.html" class="nav-link">FAQs</a></li>
+        <li onclick="handleSidebar()"><a href="./contact.html" class="nav-link">Contact</a></li>
       </ul>
     </div>
     </div>
@@ -40,15 +45,15 @@
     <form action="">
       <div>
         <label for="name"><i class="fa-solid fa-user"></i> Name</label>
-        <input type="text" id="name">
+        <input type="text" id="name" required>
       </div>
       <div>
         <label for="email"><i class="fa-solid fa-envelope"></i> Email</label>
-        <input type="email" id="email">
+        <input type="email" id="email" required>
       </div>
       <div>
         <label for="msg"><i class="fa-solid fa-message"></i> Message</label>
-        <textarea name="" id="msg" rows="2"></textarea>
+        <textarea name="" id="msg" rows="2" required></textarea>
       </div>
       <button class="form-btn bg1">Send</button>
     </form>
@@ -74,6 +79,18 @@ const handleSidebar = () =>{
   sideBar.classList.toggle("active")
   overlay.classList.toggle("active")
 };
+
+let footerMenu = document.querySelector("footer ul");
+for (let li of footerMenu.children) {
+    li.classList.remove("active");
+}
+let currentPath = window.location.pathname;
+for (let li of footerMenu.children) {
+    let anchor = li.querySelector("a");    
+    if (anchor.getAttribute("href").slice(1) === currentPath) {
+        li.classList.add("active");
+    }
+}
 </script>
 </body>
 </html>
