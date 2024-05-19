@@ -238,7 +238,8 @@ footer{
   display: flex;
   flex-direction: column;
   gap: 10px;
-  position: sticky;
+  position:sticky;
+  width: 100%;
   bottom: 0;
 }
 footer p{
@@ -383,6 +384,7 @@ justify-content: space-between;
   padding: 4px 24px;
   border-radius: 10px;
  }
+ 
  .programs,.destinations{
   margin-block: 100px;
   display: flex;

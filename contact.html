@@ -10,12 +10,14 @@
   <!-- style css -->
   <link rel="stylesheet" href="./style.css">
   <!-- style css -->
-</head>
 <style>
   body{
     overflow-y: hidden;
   }
-</style>
+  </style>
+   <!-- jQuery CDN -->
+   <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.1/jquery.min.js" integrity="sha512-v2CJ7UaYy4JwqLDIrZUI/4hqeoQieOmAZNXBeQyjo21dadnwR+8ZaIJVT8EE2iyI61OV8e6M8PP2/4hpQINQ/g==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+</head>
 <body>
   <nav class="bg1 nav1">
     <button class="menu" onclick="handleSidebar()"><i class="fa-solid fa-bars"></i></button>
@@ -69,29 +71,7 @@
   </ul>
   <p>Pathway ⓒ all rights reserved 2024</p>
 </footer>
- 
-<script>
-  let menuBtn = document.querySelector(".menu");
-let sideBar = document.querySelector(".sidebar");
-let overlay = document.querySelector(".overlay");
-//functions definations
-const handleSidebar = () =>{
-  sideBar.classList.toggle("active")
-  overlay.classList.toggle("active")
-};
-
-let footerMenu = document.querySelector("footer ul");
-for (let li of footerMenu.children) {
-    li.classList.remove("active");
-}
-let currentPath = window.location.pathname;
-for (let li of footerMenu.children) {
-    let anchor = li.querySelector("a");    
-    if (anchor.getAttribute("href").slice(1) === currentPath) {
-        li.classList.add("active");
-    }
-}
-</script>
+<script src="script.js"></script>
 </body>
 </html>
 

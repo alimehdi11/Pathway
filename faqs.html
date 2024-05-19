@@ -15,6 +15,8 @@
     }
   </style>
   <!-- style css -->
+ <!-- jQuery CDN -->
+ <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.1/jquery.min.js" integrity="sha512-v2CJ7UaYy4JwqLDIrZUI/4hqeoQieOmAZNXBeQyjo21dadnwR+8ZaIJVT8EE2iyI61OV8e6M8PP2/4hpQINQ/g==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
 </head>
 <body>
   <nav class="bg1 nav1">
@@ -86,27 +88,7 @@
   </ul>
   <p>Pathway ⓒ all rights reserved 2024</p>
 </footer>
- 
-<script>
-  let menuBtn = document.querySelector(".menu");
-let sideBar = document.querySelector(".sidebar");
-let overlay = document.querySelector(".overlay");
-//functions definations
-const handleSidebar = () =>{
-  sideBar.classList.toggle("active")
-  overlay.classList.toggle("active")
-};
-let faqBtn = document.querySelectorAll(".faq button");
-for(let btn of faqBtn){
-  btn.addEventListener("click",()=>{
-  btn.firstChild.classList.toggle('fa-plus')
-  btn.firstChild.classList.toggle('fa-minus')
-  btn.parentElement.nextElementSibling.classList.toggle("active")
-  })
-}
-
-
-</script>
+ <script src="faqs.html"></script>
 </body>
 </html>
 

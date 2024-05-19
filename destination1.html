@@ -13,6 +13,8 @@
   <!-- style css -->
   <link rel="stylesheet" href="./style.css">
   <!-- style css -->
+   <!-- jQuery CDN -->
+   <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.1/jquery.min.js" integrity="sha512-v2CJ7UaYy4JwqLDIrZUI/4hqeoQieOmAZNXBeQyjo21dadnwR+8ZaIJVT8EE2iyI61OV8e6M8PP2/4hpQINQ/g==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
 </head>
 <body>
   <nav class="bg1 nav1">
@@ -24,7 +26,7 @@
     <button class="menu" onclick="handleSidebar()" style="margin-left: 20px; margin-top: 20px;"><i class="fa-solid fa-bars"></i></button>
       <ul type="none" class="sidemenu">
         <li onclick="handleSidebar()"><a href="./index.html" class="nav-link active">Home</a></li>
-        <li onclick="handleSidebar()"><a href="#about-section" class="nav-link">About</a></li>
+        <li onclick="handleSidebar()"><a href="./index.html#about-section" class="nav-link">About</a></li>
         <li onclick="handleSidebar()"><a href="./programs.html" class="nav-link">Programs</a></li>
         <li onclick="handleSidebar()"><a href="./destination.html" class="nav-link">Destinations</a></li>
         <li onclick="handleSidebar()"><a href="./testimonals.html" class="nav-link">Testimonals</a></li>
@@ -108,55 +110,9 @@
 
 <!-- Swiper JS -->
 <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
-<script>
-  var swiper = new Swiper(".mySwiper", {
-    pagination: {
-      el: ".swiper-pagination",
-      clickable: true,
-    },
-    autoplay: {
-      delay: 3000, // Delay between slides in milliseconds (e.g., 5000 = 5 seconds)
-    },
-  });
-
-  let menuBtn = document.querySelector(".menu");
-let sideBar = document.querySelector(".sidebar");
-let overlay = document.querySelector(".overlay");
-let accordian = document.querySelector(".accordian-menu");
-let details = document.querySelector(".accordian .details");
-let accommodation = document.querySelector(".accordian .accommodation");
-//functions definations
-const handleSidebar = () =>{
-  sideBar.classList.toggle("active")
-  overlay.classList.toggle("active")
-};
-
-accordian.addEventListener("click",e=>{
-  if(e.target.tagName === "LI"){
-   for(let a of accordian.children){
-    a.classList.remove("active")
-   }
-   e.target.classList.add("active")
-  }
-   if(accordian.children[0].classList.contains("active")){
-    details.style.display = "flex"
-   } 
-   else{
-    details.style.display = "none"
-   }
-
-   if(accordian.children[1].classList.contains("active")){
-    accommodation.style.display = "flex"
-   }
-   else{
-    accommodation.style.display = "none"
-   }
-})
-</script>
-
-</script>
+<script src="slider.js"></script>
 <!-- Swiper JS -->
-
+<script src="script.js"></script>
 
 </body>
 </html>

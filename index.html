@@ -13,6 +13,8 @@
   <!-- style css -->
   <link rel="stylesheet" href="./style.css">
   <!-- style css -->
+   <!-- jQuery CDN -->
+   <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.1/jquery.min.js" integrity="sha512-v2CJ7UaYy4JwqLDIrZUI/4hqeoQieOmAZNXBeQyjo21dadnwR+8ZaIJVT8EE2iyI61OV8e6M8PP2/4hpQINQ/g==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
 </head>
 <body>
   <nav class="bg1 nav1">
@@ -103,8 +105,8 @@
       </div>
     </div>
     </div>
+    <h1 class="text-center">How can I join?</h1>
     <div class="process py-5">
-      <h1 class="text-center">How can I join?</h1>
     </div>
     <div class="mobile-process bg2"> 
     </div>
@@ -121,74 +123,7 @@
 
 <!-- Swiper JS -->
 <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
-<script>
-  var swiper = new Swiper(".mySwiper", {
-    pagination: {
-      el: ".swiper-pagination",
-      clickable: true,
-    },
-    autoplay: {
-      delay: 3000, // Delay between slides in milliseconds (e.g., 5000 = 5 seconds)
-    },
-  });
-
-  let footerMenu = document.querySelector("footer ul");
-for (let li of footerMenu.children) {
-    li.classList.remove("active");
-}
-let currentPath = window.location.pathname;
-for (let li of footerMenu.children) {
-    let anchor = li.querySelector("a");    
-    if (anchor.getAttribute("href").slice(1) === currentPath) {
-        li.classList.add("active");
-    }
-}
-  
-let card2 = document.querySelector(".cards2");
-const destinations = [
-  {
-     img:"./images/penang1.jpg",
-     name:"Penang, Malyysia",
-     time:"12 hours 50 mins"
-    },
-    {
-      img:"./images/dubai1.jpg",
-     name:"Dubai, UAE",
-     time:"1 hours 10 mins"
-    },
-    {
-      img:"./images/agra1.jpg",
-      name:"Agra, India",
-      time:"10 hours 30 mins"
-    },
-    {
-      img:"./images/cairo1.jpg",
-      name:"Cario, Egypt",
-     time:"10 hours 30 mins"
-    }
-  ]
-  for(let item of destinations){
-    card2.innerHTML +=
-     `
-     <a href="./destination4.html">
-        <div class="card">
-          <img src="${item.img}" alt="">
-          <div class="py-5">
-            <div class="flex between vcenter">
-              <h4>${item.name}</h4>
-              <button class="bg1 card-icon">
-                <i class="fa-solid fa-angle-right"></i>
-              </button>
-            </div>
-            <p><i class="fa-solid fa-plane plane-icon"></i> ${item.time}</p>
-          </div>
-        </div>
-      </a>
-    `
-  }
-</script>
-
-</script>
+<script src="slider.js"></script>
 <!-- Swiper JS -->
 
   <!-- custom js -->
