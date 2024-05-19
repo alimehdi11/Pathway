@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Pathway</title>
+  <!-- font awsome cdn -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" integrity="sha512-SnH5WK+bZxgPHs44uWIX+LLJAJ9/2PkPKZ5QiAj6Ta86w+fsb2TkcmfRyVX3pBnMFcV7oQPJkl9QevSCWr3W6A==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+  <!-- font awsome cdn -->
+  <!-- style css -->
+  <link rel="stylesheet" href="./style.css">
+  <!-- style css -->
+</head>
+<body>
+  <nav class="bg1 nav1">
+    <button class="menu" onclick="handleSidebar()"><i class="fa-solid fa-bars"></i></button>
+    <a href="#" class="logo">PATHWAY</a>
+  </nav>
+  <div class="overlay" >
+    <div class="sidebar bg1">
+    <button class="menu" onclick="handleSidebar()" style="margin-left: 20px; margin-top: 20px;"><i class="fa-solid fa-bars"></i></button>
+      <ul type="none" class="sidemenu">
+        <li onclick="handleSidebar()"><a href="./index.html" class="nav-link active">Home</a></li>
+        <li onclick="handleSidebar()"><a href="./index.html#about-section" class="nav-link">About</a></li>
+        <li onclick="handleSidebar()"><a href="./programs.html" class="nav-link">Programs</a></li>
+        <li onclick="handleSidebar()"><a href="#" class="nav-link">Destinations</a></li>
+        <li onclick="handleSidebar()"><a href="./programs.html#testimonals" class="nav-link">Testimonals</a></li>
+        <li onclick="handleSidebar()"><a href="./programs.html" class="nav-link">FAQs</a></li>
+        <li onclick="handleSidebar()"><a href="./contact.html" class="nav-link">Contact</a></li>
+      </ul>
+    </div>
+    </div>
+<div class="destinations">
+  <div class="inpBox">
+    <input type="text" placeholder="Search places..." class="bg2">
+    <i class="fa-solid fa-magnifying-glass"></i>
+  </div>
+  <h1 class="head1 text-center bigh1">Explore our destinations.</h1>
+  <div class="cards2 text-left">
+    <a href="./destination1.html">
+      <div class="card">
+        <img src="./images/penang1.jpg" alt="">
+        <div class="py-5">
+          <div class="flex between vcenter">
+            <h4>Penang, Malyysia</h4>
+            <button class="bg1 card-icon">
+              <i class="fa-solid fa-angle-right"></i>
+            </button>
+          </div>
+          <p><i class="fa-solid fa-plane plane-icon"></i> 12 hours 50 mins</p>
+        </div>
+      </div>
+    </a>
+    <a href="./destination2.html">
+      <div class="card">
+        <img src="./images/dubai1.jpg" alt="">
+        <div class="py-5">
+          <div class="flex between vcenter">
+            <h4>Dubai, UAE</h4>
+            <button class="bg1 card-icon">
+              <i class="fa-solid fa-angle-right"></i>
+            </button>
+          </div>
+          <p><i class="fa-solid fa-plane plane-icon"></i> 1 hours 10 mins</p>
+        </div>
+      </div>
+    </a>
+    <a href="./destination3.html">
+      <div class="card">
+        <img src="./images/agra1.jpg" alt="">
+        <div class="py-5">
+          <div class="flex between vcenter">
+            <h4>Agra, India</h4>
+            <button class="bg1 card-icon">
+              <i class="fa-solid fa-angle-right"></i>
+            </button>
+          </div>
+          <p><i class="fa-solid fa-plane plane-icon"></i> 10 hours 30 mins</p>
+        </div>
+      </div>
+    </a>
+    <a href="./destination4.html">
+      <div class="card">
+        <img src="./images/cairo1.jpg" alt="">
+        <div class="py-5">
+          <div class="flex between vcenter">
+            <h4>Cario, Egypt</h4>
+            <button class="bg1 card-icon">
+              <i class="fa-solid fa-angle-right"></i>
+            </button>
+          </div>
+          <p><i class="fa-solid fa-plane plane-icon"></i> 10 hours 30 mins</p>
+        </div>
+      </div>
+    </a>
+    </div>
+</div>
+
+<footer class="bg1 ">
+  <ul class="footer-menu">
+    <li><a href="./index.html"><img src="./images/Home.png" alt=""></a></li>
+    <li><a href="#"><img src="./images/Destinations.png" alt=""></a></li>
+    <li><a href="./programs.html"><img src="./images/Programs.png" alt=""></a></li>
+    <li><a href="./contact.html"><img src="./images/Contact.png" alt=""></a></li>
+  </ul>
+  <p>Pathway ⓒ all rights reserved 2024</p>
+</footer>
+ 
+<script>
+  let menuBtn = document.querySelector(".menu");
+let sideBar = document.querySelector(".sidebar");
+let overlay = document.querySelector(".overlay");
+//functions definations
+const handleSidebar = () =>{
+  sideBar.classList.toggle("active")
+  overlay.classList.toggle("active")
+};
+
+</script>
+</body>
+</html>
+
+</body>
+
+</html>

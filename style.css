@@ -4,6 +4,7 @@
   padding: 0;
   box-sizing: border-box;
   text-decoration: none;
+  border: none;
 }
 @font-face {
   font-family: "Poppins Regular";
@@ -34,6 +35,7 @@ body {
   height: 100%;
   position: relative;
   font-family: "Poppins Regular";
+  scroll-behavior: smooth;
 }
 button {
   background: transparent;
@@ -42,7 +44,10 @@ button {
   color: white;
 }
 .bg1 {
-  background-color: #5e17eb;
+  background-color: #a477ff;
+}
+.bg2{
+ background-color: #dacdf5;
 }
 .bold {
   font-weight: bold;
@@ -53,16 +58,36 @@ button {
 .py-5 {
   padding-block: 12px;
 }
+.flex{
+  display: flex;
+}
+.text-left{
+  text-align: left;
+}
+.between{
+  justify-content: space-between;
+}
+.center{
+  justify-content: center;
+}
+.vcenter{
+  align-items: center;
+}
+.text-center{
+  text-align: center;
+}
+
 /* common styles */
 
 .nav1 {
   display: flex;
   justify-content: space-between;
   padding: 10px 20px;
-  /* position: sticky; */
+  position: fixed;
+  width: 100%;
   top: 0;
   left: 0;
-  /* z-index:0000; */
+  z-index:2;
 }
 
 .menu {
@@ -84,6 +109,7 @@ button {
   width: 100%;
   height: 100%;
   transition: all 0.8s;
+  z-index: -2;
 }
 .overlay.active {
   background-color: rgba(0, 0, 0, 0.5);
@@ -109,23 +135,38 @@ button {
 .nav-link {
   color: white;
   font-weight: bold;
+  transition: all .5s;
 }
-
+.nav-link:hover{
+  color: rgba(255, 255, 255, 0.692);
+}
 .nav-link.active {
   color: rgba(255, 255, 255, 0.692);
 }
 
 .swiper {
-  height: 70vh;
+  height: 80vh;
   z-index: 000;
 }
 
+.swiper-pagination.destination{
+  top: 15%;
+}
 .swiper-pagination-bullet{
 width: 12px;
 height: 12px;
 background-color: white;
 }
 
+.swiper-slide{
+ background-size: cover;
+ background-repeat: no-repeat;
+ background-position: top center;
+}
+
+.swiper-slide.destination{
+ background-position: bottom;
+}
 .section2 {
   text-align: center;
   padding: 50px 20px;
@@ -173,13 +214,16 @@ background-color: white;
   gap: 30px;
 }
 .cards2 .card {
-  background-color: #eff0f6;
-  width: 190px;
+  background-color: #dacdf5;
+  width: 230px;
+  border-radius: 10px;
+  padding: 18px;
 }
 .cards2 .card img {
   width: 100%;
   object-fit: cover;
   height: 270px;
+  border-radius: 8px;
 }
 
 .cards2 .card p {
@@ -202,7 +246,7 @@ footer p{
 .footer-menu{
   display: flex;
   justify-content: center;
-  gap: 50px;
+  gap: 3vw;
   list-style: none;
 }
 .footer-menu li{
@@ -211,17 +255,346 @@ footer p{
   display: flex;
   justify-content: center;
   align-items: center;
+  text-align: center;
   border-radius: 50%;
   transition: all .5s;
 }
 .footer-menu li:hover{
- background-color: #430cb1;
+ background-color: #62449e;
 
 }
 .footer-menu img{
+  width: 40px;
+  height: 40px;
+}
+.about{
+  display: none;
+}
+.mobile-about .swiper{
+  height: auto;
+  width: 90%;
+}
+.about-content{
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: center;
+  gap: 20px;
+  background-color: #dacdf5;
+  padding: 20px;
+}
+.mobile-about .about-content{
+  padding: 40px;
+  font-size: 14px;
+}
+.mobile-about{
+  margin-block: 50px;
+}
+
+.about-content img {
+  width: 280px;
+  height: 280px;
+}
+.about-content p {
+  width: 350px;
+  text-align: left;
+line-height: 2;
+  font-weight: 600;
+}
+.process{
+display: none;
+}
+.process-content{
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  align-items: center;
+  text-align: start;
+  gap: 40px;
+  background-color: #dacdf5;
+  padding: 10px;
+  border-radius: 10px;
+}
+.process-content img{
+  width: 150px;
+  height: 150px;
+}
+.card-icon{
+width: 20px;
+height: 20px;
+border-radius: 50%;
+}
+
+
+.mobile-about .swiper-pagination-bullet{
+  background-color: #a477ff;
+} 
+.mobile-process{
+min-height: 470px;
+width: 80%;
+margin: auto;
+margin-block: 50px;
+padding: 20px;
+border-radius: 10px;
+display: flex;
+flex-direction: column;
+justify-content: space-between;
+}
+.stepper{
+  width: 100%;
+}
+
+.contact{
+  height: 80vh;
+  margin-block: 20px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+ }
+  .form-div{
+ padding: 25px;
+ background-color: #dacdf5;
+ border-radius: 5px;
+ width: 90%;
+ }
+ .form-div form div{
+   display: flex;
+   flex-direction: column;
+   gap: 15px;
+   margin-bottom: 14px;
+ }
+ form input{
+   padding: 10px;
+   border-radius: 10px;
+ }
+ textarea{
+   border-radius: 5px;
+   resize: none;
+   padding: 10px;
+ }
+ .form-btn{
+  display: block;
+  margin: auto;
+  padding: 4px 24px;
+  border-radius: 10px;
+ }
+ .programs,.destinations{
+  margin-block: 100px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  gap: 30px;
+ }
+ .cards3{
+  flex-wrap: wrap;
+  gap: 20px;
+ }
+ .cards3 .card{
+  width: 250px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+ background-color: #dacdf5;
+padding: 20px;
+ }
+ .cards3 .card a{
+  text-align: center;
+  padding: 10px 20px;
+ }
+.cards4{
+  width: 90%;
+}
+ .cards4 .card{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 20px;
+ }
+.card-content{
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+ .stars{
+  color: orange;
+ }
+
+ .faqs{
+  width: 90%;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+ }
+ .faq{
+  border-radius: 5px;
+  padding: 20px;
+  background-color: #dacdf5;
+ }
+ .faq p:nth-child(2){
+  max-height: 0;
+  overflow: hidden;
+  transition: all .5s ease-out;
+ }
+ .faq p:nth-child(2).active{
+  max-height:400px ;
+  overflow: hidden;
+ }
+ .faq-header{
+  display: flex;
+  justify-content: space-between;
+  gap: 20px;
+ }
+ .faq-header p{
+  width: 90%;
+}
+.faq p{
+  font-size: 12px;
+}
+
+.faq-btn{
   width: 30px;
   height: 30px;
+  border-radius: 50%;
 }
+
+.inpBox{
+  width: 90%;
+  display: flex;
+  flex-direction: column;
+  position: relative;
+}
+.inpBox input{
+  padding:18px 20px;
+  border-radius: 50px;
+}
+.inpBox i{
+  position: absolute;
+  top: 35%;
+  right: 5%;
+  font-size: 20px;
+  color: gray;
+}
+.accordian{
+  margin-block: 50px;
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  align-items: center;
+}
+.accordian-menu{
+  display: flex;
+  padding-inline: 10px;
+  gap: 20px;
+  border-radius: 5px;
+ transform: translateY(-75px);
+}
+.accordian-menu li{
+  padding-block: 10px ;
+  cursor: pointer;
+}
+.accordian-menu li.active{
+  border-bottom: 3px solid black
+}
+.accordian .accordian-content{
+  width: 90%;
+  min-height: 200px;
+}
+.details{
+display: flex;
+flex-direction: column;
+gap: 20px;
+margin: auto;
+}
+.accommodation{
+  display: none;
+  flex-direction: column;
+  gap: 20px;
+}
+.accommodation .card{
+ background-color: #dacdf5;
+ font-size: 13px;
+display: flex;
+gap: 10px;
+padding: 20px;
+}
+.accommodation-content{
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+  flex: 1;
+}
+.card-footer{
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.card-footer a{
+  padding: 5px 10px;
+  color: white;
+  border-radius: 6px;
+}
+.accommodation .card img{
+  border-radius: 5px;
+  width: 70px;
+}
+.accommodation .stars{
+  font-size: 10px;
+}
+@media (min-width:480px) {
+  .mobile-process,.form-div,.cards4,.faqs{  
+    width: 60%;
+  }
+}
+@media (min-width:992px) {
+  .about{
+display: flex;
+flex-direction: column;
+gap: 50px;
+width: 80%;
+margin: auto;
+}
+.mobile-about{
+  display: none;
+}
+.about-content p {
+text-align: justify;
+line-height: 2.2;
+}
+.process{
+  width: 60%;
+  margin: auto;
+  display: flex;
+  flex-direction: column;
+  gap: 30px;
+}
+.process-content{
+  flex-direction: row;
+}
+.mobile-process{
+  display: none;
+}
+.form-div{
+  width: 40%;
+}
+.faqs{
+  width: 60%;
+}
+.faq p {
+  font-size: 15px;
+}
+.cards4 .card{
+  flex-direction: row; 
+}
+.inpBox,.accordian .accordian-content{
+  width: 50%;
+}
+.accommodation .card img{
+  width: 100px;
+}
+}
+
 /* Header/Footer - #5E17EB
 Very light purple (Used in contact page bg and boxes) - #F4EFFF
 Light gray (Used in form placeholders + Accommodation page) - #EFF0F6 */

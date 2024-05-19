@@ -1,0 +1,166 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Pathway</title>
+  <!-- font awsome cdn -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" integrity="sha512-SnH5WK+bZxgPHs44uWIX+LLJAJ9/2PkPKZ5QiAj6Ta86w+fsb2TkcmfRyVX3pBnMFcV7oQPJkl9QevSCWr3W6A==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+  <!-- font awsome cdn -->
+  <!-- Link Swiper's CSS -->
+ <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
+ <!-- Link Swiper's CSS -->
+  <!-- style css -->
+  <link rel="stylesheet" href="./style.css">
+  <!-- style css -->
+</head>
+<body>
+  <nav class="bg1 nav1">
+    <button class="menu" onclick="handleSidebar()"><i class="fa-solid fa-bars"></i></button>
+    <a href="#" class="logo">PATHWAY</a>
+  </nav>
+  <div class="overlay" >
+    <div class="sidebar bg1">
+    <button class="menu" onclick="handleSidebar()" style="margin-left: 20px; margin-top: 20px;"><i class="fa-solid fa-bars"></i></button>
+      <ul type="none" class="sidemenu">
+        <li onclick="handleSidebar()"><a href="./index.html" class="nav-link active">Home</a></li>
+        <li onclick="handleSidebar()"><a href="#about-section" class="nav-link">About</a></li>
+        <li onclick="handleSidebar()"><a href="./programs.html" class="nav-link">Programs</a></li>
+        <li onclick="handleSidebar()"><a href="./destination.html" class="nav-link">Destinations</a></li>
+        <li onclick="handleSidebar()"><a href="./programs.html#testimonals" class="nav-link">Testimonals</a></li>
+        <li onclick="handleSidebar()"><a href="./programs.html" class="nav-link">FAQs</a></li>
+        <li onclick="handleSidebar()"><a href="./contact.html" class="nav-link">Contact</a></li>
+      </ul>
+    </div>
+    </div>
+  <!-- Swiper -->
+
+  <div class="swiper mySwiper destination">
+    <div class="swiper-wrapper">
+      <div class="swiper-slide destination" style="background-image: url(./images/penang1.jpg);"></div>
+      <div class="swiper-slide destination" style="background-image: url(./images/penang2.jpg);"></div>
+      <div class="swiper-slide destination" style="background-image: url(./images/penang3.jpg);"></div>
+      <div class="swiper-slide destination" style="background-image: url(./images/penang4.jpg);"></div>
+      <div class="swiper-slide destination" style="background-image: url(./images/penang5.jpg);"></div>
+      <div class="swiper-slide destination" style="background-image: url(./images/penang6.jpg);"></div>
+      <div class="swiper-slide destination" style="background-image: url(./images/penang7.jpg);"></div>
+    </div>
+    <div class="swiper-pagination destination"></div>
+  </div>
+  <!-- Swiper -->
+  <div class="accordian">
+    <ul class="accordian-menu bg2" type="none">
+      <li class="active">Details</li>
+      <li>Accommodation</li>
+    </ul>
+    <div class="accordian-content">
+      <div class="details">
+        <p>Penang a state in Peninsular Malaysia situated on its northwest coast, is well-known for its diverse heritage, rich history, and mouthwatering cuisine. its capital city, George Town, is recognizied as a UNESCO World Heritage Site beacuse of its colorful street art, diverse array of cultures</p>
+        <p>Beyond its cultural charm, Penang offers stunning beaches, lush hills, and a thriving art and food scene, making it a beloved desstination for both locals and tourists alike.</p>
+      </div>
+      <div class="accommodation">
+        <div class="card">
+          <img src="./images/st-giles wembley - penang.jpg" alt="">
+          <div class="accommodation-content">
+            <h3>St Giles Wembley</h3>
+            <div class="stars">
+              <i class="fa-solid fa-star"></i>
+              <i class="fa-solid fa-star"></i>
+              <i class="fa-solid fa-star"></i>
+              <i class="fa-solid fa-star"></i>
+              <i class="fa-solid fa-star"></i>
+            </div>
+            <div class="card-footer">
+              <h4>13 BG/night</h4>
+              <a href="#" class="bg1">Book</a>
+            </div>
+          </div>
+        </div>
+        <div class="card">
+          <img src="./images/bayview hotel penang.jpg" alt="">
+          <div class="accommodation-content">
+            <h3>Bayview Hotel</h3>
+            <div class="stars">
+              <i class="fa-solid fa-star"></i>
+              <i class="fa-solid fa-star"></i>
+              <i class="fa-solid fa-star"></i>
+              <i class="fa-solid fa-star"></i>
+              <i class="fa-solid fa-star"></i>
+            </div>
+            <div class="card-footer">
+              <h4>13 BG/night</h4>
+              <a href="#" class="bg1">Book</a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+<footer class="bg1 ">
+  <ul class="footer-menu">
+    <li><a href="./index.html"><img src="./images/Home.png" alt=""></a></li>
+    <li><a href="./destination.html"><img src="./images/Destinations.png" alt=""></a></li>
+    <li><a href="./programs.html"><img src="./images/Programs.png" alt=""></a></li>
+    <li><a href="./contact.html"><img src="./images/Contact.png" alt=""></a></li>
+  </ul>
+  <p>Pathway ⓒ all rights reserved 2024</p>
+</footer>
+
+<!-- Swiper JS -->
+<script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+<script>
+  var swiper = new Swiper(".mySwiper", {
+    pagination: {
+      el: ".swiper-pagination",
+      clickable: true,
+    },
+    autoplay: {
+      delay: 3000, // Delay between slides in milliseconds (e.g., 5000 = 5 seconds)
+    },
+  });
+
+  let menuBtn = document.querySelector(".menu");
+let sideBar = document.querySelector(".sidebar");
+let overlay = document.querySelector(".overlay");
+let accordian = document.querySelector(".accordian-menu");
+let details = document.querySelector(".accordian .details");
+let accommodation = document.querySelector(".accordian .accommodation");
+//functions definations
+const handleSidebar = () =>{
+  sideBar.classList.toggle("active")
+  overlay.classList.toggle("active")
+};
+
+accordian.addEventListener("click",e=>{
+  if(e.target.tagName === "LI"){
+   for(let a of accordian.children){
+    a.classList.remove("active")
+   }
+   e.target.classList.add("active")
+  }
+   if(accordian.children[0].classList.contains("active")){
+    details.style.display = "flex"
+   } 
+   else{
+    details.style.display = "none"
+   }
+
+   if(accordian.children[1].classList.contains("active")){
+    accommodation.style.display = "flex"
+   }
+   else{
+    accommodation.style.display = "none"
+   }
+})
+</script>
+
+</script>
+<!-- Swiper JS -->
+
+
+</body>
+</html>
+
+</body>
+
+</html>
